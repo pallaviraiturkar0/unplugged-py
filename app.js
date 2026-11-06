@@ -119,7 +119,7 @@
 
   function updateStats() {
     $('streak').textContent = state.streak;
-    $('solved').textContent = state.solved.length;
+    $('solved').textContent = state.solved.filter((id) => puzzles.some((p) => p.id === id)).length;
     $('total').textContent = puzzles.length;
     $('sound').textContent = state.sound ? '🔊' : '🔇';
   }
@@ -141,7 +141,7 @@
   function show() {
     const n = puzzles.indexOf(puzzle) + 1;
     $('pnum').textContent = `PUZZLE #${String(n).padStart(2, '0')}${state.solved.includes(puzzle.id) ? ' ✔' : ''}`;
-    $('plevel').textContent = '★'.repeat(puzzle.level) + '☆'.repeat(3 - puzzle.level);
+    $('plevel').textContent = '★'.repeat(puzzle.level) + '☆'.repeat(2 - puzzle.level);
     $('ptitle').textContent = puzzle.title.toUpperCase();
     $('hint').hidden = true;
     $('hint').textContent = `HINT: ${puzzle.hint}`;

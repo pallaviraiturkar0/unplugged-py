@@ -30,7 +30,7 @@ Add an object to `puzzles.json`:
 }
 ```
 
-Each item in `cases` is `[args, expected]`. Values are compared as JSON, so `1` and `True` are different.
+`level` is 1 (easy) or 2 (medium). Keep puzzles short and give them a small story. Each item in `cases` is `[args, expected]`. Values are compared as JSON, so `1` and `True` are different.
 
 ## Run locally
 
