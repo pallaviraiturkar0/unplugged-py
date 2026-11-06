@@ -1,0 +1,1078 @@
+[
+ {
+  "id": "palindrome",
+  "title": "Mirror, Mirror",
+  "level": 1,
+  "fn": "is_palindrome",
+  "prompt": "Return True if s reads the same forwards and backwards, ignoring case and anything that isn't a letter or digit.",
+  "hint": "Filter with str.isalnum(), lowercase, then compare with its reverse [::-1].",
+  "starter": "def is_palindrome(s):\n    # your code here\n    pass\n",
+  "cases": [
+   [
+    [
+     "A man, a plan, a canal: Panama"
+    ],
+    true
+   ],
+   [
+    [
+     "hello"
+    ],
+    false
+   ],
+   [
+    [
+     ""
+    ],
+    true
+   ],
+   [
+    [
+     "No 'x' in Nixon"
+    ],
+    true
+   ],
+   [
+    [
+     "ab"
+    ],
+    false
+   ]
+  ]
+ },
+ {
+  "id": "fizzbuzz",
+  "title": "FizzBuzz, Obviously",
+  "level": 1,
+  "fn": "fizzbuzz",
+  "prompt": "Return a list of strings for 1..n: 'Fizz' for multiples of 3, 'Buzz' for 5, 'FizzBuzz' for both, else the number.",
+  "hint": "Check the 'both' case first, or build the word up piece by piece.",
+  "starter": "def fizzbuzz(n):\n    # your code here\n    pass\n",
+  "cases": [
+   [
+    [
+     1
+    ],
+    [
+     "1"
+    ]
+   ],
+   [
+    [
+     5
+    ],
+    [
+     "1",
+     "2",
+     "Fizz",
+     "4",
+     "Buzz"
+    ]
+   ],
+   [
+    [
+     15
+    ],
+    [
+     "1",
+     "2",
+     "Fizz",
+     "4",
+     "Buzz",
+     "Fizz",
+     "7",
+     "8",
+     "Fizz",
+     "Buzz",
+     "11",
+     "Fizz",
+     "13",
+     "14",
+     "FizzBuzz"
+    ]
+   ]
+  ]
+ },
+ {
+  "id": "two-sum",
+  "title": "Two Sum",
+  "level": 1,
+  "fn": "two_sum",
+  "prompt": "Return [i, j] with i < j where nums[i] + nums[j] == target. There is exactly one answer.",
+  "hint": "A dict from value -> index lets you find the partner in one pass.",
+  "starter": "def two_sum(nums, target):\n    # your code here\n    pass\n",
+  "cases": [
+   [
+    [
+     [
+      2,
+      7,
+      11,
+      15
+     ],
+     9
+    ],
+    [
+     0,
+     1
+    ]
+   ],
+   [
+    [
+     [
+      3,
+      2,
+      4
+     ],
+     6
+    ],
+    [
+     1,
+     2
+    ]
+   ],
+   [
+    [
+     [
+      1,
+      5,
+      3,
+      8
+     ],
+     11
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   [
+    [
+     [
+      0,
+      4,
+      3,
+      0
+     ],
+     0
+    ],
+    [
+     0,
+     3
+    ]
+   ]
+  ]
+ },
+ {
+  "id": "vowels",
+  "title": "Vowel Counter",
+  "level": 1,
+  "fn": "count_vowels",
+  "prompt": "Return how many vowels (a, e, i, o, u, any case) are in s.",
+  "hint": "sum(1 for c in s.lower() if c in 'aeiou')",
+  "starter": "def count_vowels(s):\n    # your code here\n    pass\n",
+  "cases": [
+   [
+    [
+     "hello"
+    ],
+    2
+   ],
+   [
+    [
+     "AEIOU"
+    ],
+    5
+   ],
+   [
+    [
+     "rhythm"
+    ],
+    0
+   ],
+   [
+    [
+     "Unplugged Python"
+    ],
+    4
+   ]
+  ]
+ },
+ {
+  "id": "reverse-words",
+  "title": "Backwards Talk",
+  "level": 1,
+  "fn": "reverse_words",
+  "prompt": "Reverse the order of words. Collapse runs of spaces to one and trim the ends.",
+  "hint": "str.split() with no arguments already handles messy spaces.",
+  "starter": "def reverse_words(s):\n    # your code here\n    pass\n",
+  "cases": [
+   [
+    [
+     "hello world"
+    ],
+    "world hello"
+   ],
+   [
+    [
+     "  the sky   is blue "
+    ],
+    "blue is sky the"
+   ],
+   [
+    [
+     "one"
+    ],
+    "one"
+   ]
+  ]
+ },
+ {
+  "id": "digital-root",
+  "title": "Digital Root",
+  "level": 1,
+  "fn": "digital_root",
+  "prompt": "Sum the digits of n, again and again, until one digit is left. Return it.",
+  "hint": "Loop while n >= 10. (There's also a one-line math trick with % 9.)",
+  "starter": "def digital_root(n):\n    # your code here\n    pass\n",
+  "cases": [
+   [
+    [
+     16
+    ],
+    7
+   ],
+   [
+    [
+     942
+    ],
+    6
+   ],
+   [
+    [
+     0
+    ],
+    0
+   ],
+   [
+    [
+     493193
+    ],
+    2
+   ]
+  ]
+ },
+ {
+  "id": "anagram",
+  "title": "Anagram Detector",
+  "level": 1,
+  "fn": "is_anagram",
+  "prompt": "Return True if a and b use the same letters the same number of times. Ignore spaces and case.",
+  "hint": "sorted() or collections.Counter both work.",
+  "starter": "def is_anagram(a, b):\n    # your code here\n    pass\n",
+  "cases": [
+   [
+    [
+     "Listen",
+     "Silent"
+    ],
+    true
+   ],
+   [
+    [
+     "Dormitory",
+     "dirty room"
+    ],
+    true
+   ],
+   [
+    [
+     "abc",
+     "abd"
+    ],
+    false
+   ],
+   [
+    [
+     "aab",
+     "abb"
+    ],
+    false
+   ]
+  ]
+ },
+ {
+  "id": "rle",
+  "title": "Squish It",
+  "level": 2,
+  "fn": "run_length",
+  "prompt": "Run-length encode s: 'aaabcc' becomes 'a3b1c2'.",
+  "hint": "Walk the string and track the current char and its count. itertools.groupby is a shortcut.",
+  "starter": "def run_length(s):\n    # your code here\n    pass\n",
+  "cases": [
+   [
+    [
+     "aaabcc"
+    ],
+    "a3b1c2"
+   ],
+   [
+    [
+     ""
+    ],
+    ""
+   ],
+   [
+    [
+     "z"
+    ],
+    "z1"
+   ],
+   [
+    [
+     "aabbbbaa"
+    ],
+    "a2b4a2"
+   ]
+  ]
+ },
+ {
+  "id": "brackets",
+  "title": "Bracket Police",
+  "level": 2,
+  "fn": "balanced",
+  "prompt": "Return True if every (, [ and { in s is closed in the right order. Ignore other characters.",
+  "hint": "Push openers on a stack; every closer must match the top.",
+  "starter": "def balanced(s):\n    # your code here\n    pass\n",
+  "cases": [
+   [
+    [
+     "([]{})"
+    ],
+    true
+   ],
+   [
+    [
+     "([)]"
+    ],
+    false
+   ],
+   [
+    [
+     "(("
+    ],
+    false
+   ],
+   [
+    [
+     ""
+    ],
+    true
+   ],
+   [
+    [
+     "a(b[c]d)e"
+    ],
+    true
+   ]
+  ]
+ },
+ {
+  "id": "missing",
+  "title": "The Missing Number",
+  "level": 1,
+  "fn": "missing_number",
+  "prompt": "nums holds every number from 0 to n except one. Return the missing one.",
+  "hint": "The sum of 0..n is n*(n+1)//2.",
+  "starter": "def missing_number(nums):\n    # your code here\n    pass\n",
+  "cases": [
+   [
+    [
+     [
+      3,
+      0,
+      1
+     ]
+    ],
+    2
+   ],
+   [
+    [
+     [
+      0,
+      1
+     ]
+    ],
+    2
+   ],
+   [
+    [
+     [
+      9,
+      6,
+      4,
+      2,
+      3,
+      5,
+      7,
+      0,
+      1
+     ]
+    ],
+    8
+   ],
+   [
+    [
+     [
+      1
+     ]
+    ],
+    0
+   ]
+  ]
+ },
+ {
+  "id": "rotate",
+  "title": "Turn It 90\u00b0",
+  "level": 2,
+  "fn": "rotate",
+  "prompt": "Return the square matrix rotated 90 degrees clockwise (as a list of lists).",
+  "hint": "Reverse the rows, then transpose: zip(*rows).",
+  "starter": "def rotate(matrix):\n    # your code here\n    pass\n",
+  "cases": [
+   [
+    [
+     [
+      [
+       1,
+       2
+      ],
+      [
+       3,
+       4
+      ]
+     ]
+    ],
+    [
+     [
+      3,
+      1
+     ],
+     [
+      4,
+      2
+     ]
+    ]
+   ],
+   [
+    [
+     [
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       4,
+       5,
+       6
+      ],
+      [
+       7,
+       8,
+       9
+      ]
+     ]
+    ],
+    [
+     [
+      7,
+      4,
+      1
+     ],
+     [
+      8,
+      5,
+      2
+     ],
+     [
+      9,
+      6,
+      3
+     ]
+    ]
+   ],
+   [
+    [
+     [
+      [
+       5
+      ]
+     ]
+    ],
+    [
+     [
+      5
+     ]
+    ]
+   ]
+  ]
+ },
+ {
+  "id": "flatten",
+  "title": "Unbox Everything",
+  "level": 2,
+  "fn": "flatten",
+  "prompt": "Flatten a list that may contain lists, nested any number of levels deep.",
+  "hint": "Recursion: if an item is a list, flatten it too.",
+  "starter": "def flatten(nested):\n    # your code here\n    pass\n",
+  "cases": [
+   [
+    [
+     [
+      1,
+      [
+       2,
+       [
+        3,
+        [
+         4
+        ]
+       ],
+       5
+      ]
+     ]
+    ],
+    [
+     1,
+     2,
+     3,
+     4,
+     5
+    ]
+   ],
+   [
+    [
+     []
+    ],
+    []
+   ],
+   [
+    [
+     [
+      [
+       []
+      ]
+     ]
+    ],
+    []
+   ],
+   [
+    [
+     [
+      [
+       1,
+       2
+      ],
+      3,
+      [
+       [
+        4
+       ],
+       [
+        5,
+        [
+         6
+        ]
+       ]
+      ]
+     ]
+    ],
+    [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ]
+   ]
+  ]
+ },
+ {
+  "id": "collatz",
+  "title": "Collatz Countdown",
+  "level": 1,
+  "fn": "collatz_steps",
+  "prompt": "If n is even, halve it; if odd, do 3n + 1. Return how many steps it takes to reach 1.",
+  "hint": "A while loop and a counter. collatz_steps(1) is 0.",
+  "starter": "def collatz_steps(n):\n    # your code here\n    pass\n",
+  "cases": [
+   [
+    [
+     1
+    ],
+    0
+   ],
+   [
+    [
+     6
+    ],
+    8
+   ],
+   [
+    [
+     7
+    ],
+    16
+   ],
+   [
+    [
+     27
+    ],
+    111
+   ]
+  ]
+ },
+ {
+  "id": "roman",
+  "title": "When in Rome",
+  "level": 2,
+  "fn": "to_roman",
+  "prompt": "Convert 1 <= n <= 3999 to a Roman numeral, e.g. 1994 -> 'MCMXCIV'.",
+  "hint": "Use a table that includes the subtractive pairs: 900 'CM', 400 'CD', 90 'XC', ...",
+  "starter": "def to_roman(n):\n    # your code here\n    pass\n",
+  "cases": [
+   [
+    [
+     3
+    ],
+    "III"
+   ],
+   [
+    [
+     4
+    ],
+    "IV"
+   ],
+   [
+    [
+     58
+    ],
+    "LVIII"
+   ],
+   [
+    [
+     1994
+    ],
+    "MCMXCIV"
+   ],
+   [
+    [
+     3999
+    ],
+    "MMMCMXCIX"
+   ]
+  ]
+ },
+ {
+  "id": "caesar",
+  "title": "Secret Agent",
+  "level": 2,
+  "fn": "caesar",
+  "prompt": "Shift every letter k places along the alphabet, wrapping around. Keep case; leave other characters alone.",
+  "hint": "ord() and chr() with % 26. Handle 'a' and 'A' bases separately.",
+  "starter": "def caesar(s, k):\n    # your code here\n    pass\n",
+  "cases": [
+   [
+    [
+     "abc",
+     1
+    ],
+    "bcd"
+   ],
+   [
+    [
+     "Hello, World!",
+     3
+    ],
+    "Khoor, Zruog!"
+   ],
+   [
+    [
+     "xyz",
+     3
+    ],
+    "abc"
+   ],
+   [
+    [
+     "Python",
+     26
+    ],
+    "Python"
+   ]
+  ]
+ },
+ {
+  "id": "second-largest",
+  "title": "Silver Medal",
+  "level": 1,
+  "fn": "second_largest",
+  "prompt": "Return the second-largest distinct value in nums, or None if there isn't one.",
+  "hint": "set() removes duplicates. Then sort, or track the top two.",
+  "starter": "def second_largest(nums):\n    # your code here\n    pass\n",
+  "cases": [
+   [
+    [
+     [
+      3,
+      1,
+      4,
+      1,
+      5
+     ]
+    ],
+    4
+   ],
+   [
+    [
+     [
+      7,
+      7,
+      7
+     ]
+    ],
+    null
+   ],
+   [
+    [
+     [
+      2,
+      1
+     ]
+    ],
+    1
+   ],
+   [
+    [
+     []
+    ],
+    null
+   ]
+  ]
+ },
+ {
+  "id": "pascal",
+  "title": "Pascal's Triangle",
+  "level": 2,
+  "fn": "pascal_row",
+  "prompt": "Return row n of Pascal's triangle (row 0 is [1]).",
+  "hint": "Each new row is 1, the sums of neighbours in the previous row, then 1.",
+  "starter": "def pascal_row(n):\n    # your code here\n    pass\n",
+  "cases": [
+   [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   [
+    [
+     1
+    ],
+    [
+     1,
+     1
+    ]
+   ],
+   [
+    [
+     4
+    ],
+    [
+     1,
+     4,
+     6,
+     4,
+     1
+    ]
+   ],
+   [
+    [
+     6
+    ],
+    [
+     1,
+     6,
+     15,
+     20,
+     15,
+     6,
+     1
+    ]
+   ]
+  ]
+ },
+ {
+  "id": "grid-paths",
+  "title": "Robot on a Grid",
+  "level": 2,
+  "fn": "grid_paths",
+  "prompt": "A robot starts top-left and can only move right or down. How many routes reach bottom-right?",
+  "hint": "Each cell's count = cell above + cell to the left. (Or think combinations.)",
+  "starter": "def grid_paths(rows, cols):\n    # your code here\n    pass\n",
+  "cases": [
+   [
+    [
+     1,
+     1
+    ],
+    1
+   ],
+   [
+    [
+     2,
+     2
+    ],
+    2
+   ],
+   [
+    [
+     3,
+     7
+    ],
+    28
+   ],
+   [
+    [
+     3,
+     3
+    ],
+    6
+   ]
+  ]
+ },
+ {
+  "id": "max-subarray",
+  "title": "Best Streak",
+  "level": 3,
+  "fn": "max_subarray",
+  "prompt": "Return the largest sum of any non-empty run of consecutive numbers in nums.",
+  "hint": "Kadane: keep the best sum ending here = max(x, previous + x).",
+  "starter": "def max_subarray(nums):\n    # your code here\n    pass\n",
+  "cases": [
+   [
+    [
+     [
+      -2,
+      1,
+      -3,
+      4,
+      -1,
+      2,
+      1,
+      -5,
+      4
+     ]
+    ],
+    6
+   ],
+   [
+    [
+     [
+      1
+     ]
+    ],
+    1
+   ],
+   [
+    [
+     [
+      -3,
+      -1,
+      -2
+     ]
+    ],
+    -1
+   ],
+   [
+    [
+     [
+      5,
+      4,
+      -1,
+      7,
+      8
+     ]
+    ],
+    23
+   ]
+  ]
+ },
+ {
+  "id": "spiral",
+  "title": "Snail Trail",
+  "level": 3,
+  "fn": "spiral",
+  "prompt": "Return all items of the matrix in clockwise spiral order, starting top-left.",
+  "hint": "Take the first row, rotate what's left counter-clockwise, repeat.",
+  "starter": "def spiral(matrix):\n    # your code here\n    pass\n",
+  "cases": [
+   [
+    [
+     [
+      [
+       1,
+       2,
+       3
+      ],
+      [
+       4,
+       5,
+       6
+      ],
+      [
+       7,
+       8,
+       9
+      ]
+     ]
+    ],
+    [
+     1,
+     2,
+     3,
+     6,
+     9,
+     8,
+     7,
+     4,
+     5
+    ]
+   ],
+   [
+    [
+     [
+      [
+       1,
+       2,
+       3,
+       4
+      ],
+      [
+       5,
+       6,
+       7,
+       8
+      ],
+      [
+       9,
+       10,
+       11,
+       12
+      ]
+     ]
+    ],
+    [
+     1,
+     2,
+     3,
+     4,
+     8,
+     12,
+     11,
+     10,
+     9,
+     5,
+     6,
+     7
+    ]
+   ],
+   [
+    [
+     []
+    ],
+    []
+   ]
+  ]
+ },
+ {
+  "id": "word-freq",
+  "title": "Gossip Counter",
+  "level": 2,
+  "fn": "top_word",
+  "prompt": "Return the most common word (lowercase, letters only). Break ties alphabetically.",
+  "hint": "re.findall(r'[a-z]+', text.lower()) then a Counter.",
+  "starter": "def top_word(text):\n    # your code here\n    pass\n",
+  "cases": [
+   [
+    [
+     "the cat and the hat"
+    ],
+    "the"
+   ],
+   [
+    [
+     "B a b A c"
+    ],
+    "a"
+   ],
+   [
+    [
+     "Hello, hello! HELLO?"
+    ],
+    "hello"
+   ]
+  ]
+ },
+ {
+  "id": "primes",
+  "title": "Prime Time",
+  "level": 1,
+  "fn": "is_prime",
+  "prompt": "Return True if n is a prime number.",
+  "hint": "Only check divisors up to the square root of n. Remember 0 and 1.",
+  "starter": "def is_prime(n):\n    # your code here\n    pass\n",
+  "cases": [
+   [
+    [
+     0
+    ],
+    false
+   ],
+   [
+    [
+     1
+    ],
+    false
+   ],
+   [
+    [
+     2
+    ],
+    true
+   ],
+   [
+    [
+     17
+    ],
+    true
+   ],
+   [
+    [
+     21
+    ],
+    false
+   ],
+   [
+    [
+     7919
+    ],
+    true
+   ]
+  ]
+ }
+]
