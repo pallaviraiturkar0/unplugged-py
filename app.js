@@ -7,9 +7,15 @@
   const code = $('code');
   let puzzles = [], puzzle, worker, ready = false, runId = 0, timer;
 
+  // Mirrors Python's repr(): single quotes unless the string has ' but no ".
+  const strRepr = (v) => {
+    const q = v.includes("'") && !v.includes('"') ? '"' : "'";
+    const body = v.replace(/\\/g, '\\\\').replace(/\n/g, '\\n').replace(/\t/g, '\\t');
+    return q + (q === "'" ? body.replace(/'/g, "\\'") : body) + q;
+  };
   const pyRepr = (v) =>
     v === null ? 'None' : v === true ? 'True' : v === false ? 'False'
-    : typeof v === 'string' ? `'${v.replace(/\\/g, '\\\\').replace(/'/g, "\\'")}'`
+    : typeof v === 'string' ? strRepr(v)
     : Array.isArray(v) ? `[${v.map(pyRepr).join(', ')}]` : String(v);
   const el = (tag, cls, text) => Object.assign(document.createElement(tag), cls ? { className: cls } : {}, text != null ? { textContent: text } : {});
 
